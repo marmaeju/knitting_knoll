@@ -5,7 +5,13 @@ import axios from 'axios'
 
 const Casts = () => {
   const [casts, setCasts] = useState([])
-  const [formState, setFormState] = useState({ type: '', link: '' })
+  const [formState, setFormState] = useState({
+    name: '',
+    description: '',
+    image: '',
+    link: '',
+    type: ''
+  })
   const [deletedCast, setDeletedCast] = useState(false)
 
   useEffect(() => {
@@ -24,7 +30,13 @@ const Casts = () => {
     // e.preventDefault()
     const res = await axios.post('http://localhost:3001/casts/', formState)
     setCasts(res)
-    setFormState({ type: '', link: '' })
+    setFormState({
+      name: '',
+      description: '',
+      image: '',
+      link: '',
+      type: ''
+    })
   }
 
   return (
@@ -33,11 +45,25 @@ const Casts = () => {
       <div>
         <h4>Create New Resource</h4>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="type">Type:</label>
+          <label htmlFor="name">Stitch Name:</label>
           <input
-            id="type"
-            placeholder="Yarn or Pattern"
-            value={formState.type}
+            id="name"
+            placeholder="Name"
+            value={formState.name}
+            onChange={handleChange}
+          />
+          <label htmlFor="description">Description</label>
+          <input
+            id="description"
+            placeholder="description"
+            value={formState.description}
+            onChange={handleChange}
+          />
+          <label htmlFor="image">Image</label>
+          <input
+            id="image"
+            placeholder="image"
+            value={formState.image}
             onChange={handleChange}
           />
           <label htmlFor="link">Link:</label>
@@ -45,6 +71,13 @@ const Casts = () => {
             id="link"
             placeholder="Link"
             value={formState.link}
+            onChange={handleChange}
+          />
+          <label htmlFor="type">Type:</label>
+          <input
+            id="type"
+            placeholder="Cast-On or Cast-Off"
+            value={formState.type}
             onChange={handleChange}
           />
           <button>Create Material</button>
