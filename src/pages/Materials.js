@@ -6,6 +6,7 @@ import axios from 'axios'
 const Materials = (props) => {
   const [materials, setMaterials] = useState([])
   const [formState, setFormState] = useState({ type: '', link: '' })
+  const [deletedMaterial, setDeletedMaterial] = useState(false)
 
   useEffect(() => {
     const handleMaterials = async () => {
@@ -13,7 +14,7 @@ const Materials = (props) => {
       setMaterials(res.data)
     }
     handleMaterials()
-  }, [])
+  }, [deletedMaterial])
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
@@ -56,6 +57,8 @@ const Materials = (props) => {
             id={material.id}
             type={material.type}
             link={material.link}
+            setDeletedMaterial={setDeletedMaterial}
+            deletedMaterial={deletedMaterial}
           />
         ))}
       </div>

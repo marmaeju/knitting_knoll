@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
 
-const MaterialCard = ({type, link, id}) => {
+const MaterialCard = ({type, link, id, setDeletedMaterial, deletedMaterial}) => {
   const [formState, setFormState] = useState({ type: '', link: '' })
   
   const handleChange = (e) => {
@@ -9,14 +9,15 @@ const MaterialCard = ({type, link, id}) => {
   }
 
   const handleSubmit = async (e) => {
-    // e.preventDefault()
+    e.preventDefault()
     const res = await axios.put(`http://localhost:3001/materials/${id}`, formState)
     setFormState({ type: '', link: '' })
   }
 
   const deleteMaterial = async (e) => {
-    // e.preventDefault()
+    e.preventDefault()
     const res = await axios.delete(`http://localhost:3001/materials/${id}`)
+    setDeletedMaterial(!deletedMaterial)
   }
 
   return (
