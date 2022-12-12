@@ -9,13 +9,13 @@ const MaterialCard = ({type, link, id}) => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     const res = await axios.put(`http://localhost:3001/materials/${id}`, formState)
     setFormState({ type: '', link: '' })
   }
 
   const deleteMaterial = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     const res = await axios.delete(`http://localhost:3001/materials/${id}`)
   }
 
@@ -24,7 +24,7 @@ const MaterialCard = ({type, link, id}) => {
       <div>
         <div>
         <p>{type}</p>
-        <a href={link}>{link}</a>
+        <a href={link} target='_blank'>{link}</a>
         </div>
         <div>
         <form onSubmit={handleSubmit}>

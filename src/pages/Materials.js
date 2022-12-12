@@ -13,7 +13,7 @@ const Materials = (props) => {
       setMaterials(res.data)
     }
     handleMaterials()
-  })
+  }, [])
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
