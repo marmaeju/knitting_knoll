@@ -3,7 +3,7 @@ import { CreateMaterial, GetMaterials } from '../services/MaterialsServices'
 import MaterialCard from '../components/MaterialCard'
 import axios from 'axios'
 
-const Materials = () => {
+const Materials = (props) => {
   const [materials, setMaterials] = useState([])
   const [formState, setFormState] = useState({ type: '', link: '' })
 
@@ -53,6 +53,7 @@ const Materials = () => {
         {materials?.map((material) => (
           <MaterialCard
             key={material.id}
+            id={material.id}
             type={material.type}
             link={material.link}
           />
