@@ -15,16 +15,35 @@ const Materials = () => {
     handleMaterials()
   })
 
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.id]: e.target.value })
+  }
+
   return (
     <div>
       <h1>materials</h1>
       <div>
+        <h4>Create New Resource</h4>
+        <form>
+          <label htmlFor="type">Type:</label>
+          <input
+            id="type"
+            placeholder="Yarn or Pattern"
+            value={formState.type}
+            onChange={handleChange}
+          />
+          <label htmlFor="link">Link:</label>
+          <input
+            id="link"
+            placeholder="Link"
+            value={formState.link}
+            onChange={handleChange}
+          />
+          <button>Create</button>
+        </form>
+      </div>
+      <div>
         {materials?.map((material) => (
-          // <div key={material.id}>
-          //   <p>{material.type}</p>
-          //   <a href={material.link}>{material.link}</a>
-          //   <button>Update Resource</button>
-          // </div>
           <MaterialCard
             key={material.id}
             type={material.type}

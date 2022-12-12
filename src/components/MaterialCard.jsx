@@ -5,6 +5,8 @@ const MaterialCard = ({type, link}) => {
         <div>
         <p>{type}</p>
         <a href={link}>{link}</a>
+        <button>Update</button>
+        <button>Delete</button>
         </div>
       </div>
     </div>
