@@ -1,7 +1,11 @@
+import { useNavigate } from 'react-router-dom'
+
 const Home = () => {
+  let navigate = useNavigate()
+
   return (
     <div>
-      <h1>Home!</h1>
+      <button onClick={() => navigate('/materials')}>Materials</button>
     </div>
   )
 }
