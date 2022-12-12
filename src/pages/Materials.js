@@ -9,8 +9,8 @@ const Materials = () => {
 
   useEffect(() => {
     const handleMaterials = async () => {
-      const results = await axios.get('http://localhost:3001/materials/')
-      setMaterials(results.data)
+      const res = await axios.get('http://localhost:3001/materials/')
+      setMaterials(res.data)
     }
     handleMaterials()
   })
@@ -19,12 +19,19 @@ const Materials = () => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
 
+  const handleSubmit = async (e) => {
+    // e.preventDefault()
+    const res = await axios.post('http://localhost:3001/materials/', formState)
+    setMaterials(res)
+    setFormState({ type: '', link: '' })
+  }
+
   return (
     <div>
       <h1>materials</h1>
       <div>
         <h4>Create New Resource</h4>
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="type">Type:</label>
           <input
             id="type"
@@ -39,7 +46,7 @@ const Materials = () => {
             value={formState.link}
             onChange={handleChange}
           />
-          <button>Create</button>
+          <button>Create Material</button>
         </form>
       </div>
       <div>
