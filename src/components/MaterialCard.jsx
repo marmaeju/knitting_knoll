@@ -14,9 +14,10 @@ const MaterialCard = ({type, link, id}) => {
     setFormState({ type: '', link: '' })
   }
 
-  // const deleteMaterial = async (e) => {
-
-  // }
+  const deleteMaterial = async (e) => {
+    e.preventDefault()
+    const res = await axios.delete(`http://localhost:3001/materials/${id}`)
+  }
 
   return (
     <div>
@@ -43,6 +44,9 @@ const MaterialCard = ({type, link, id}) => {
           />
           <button>Update Material</button>
         </form>
+        </div>
+        <div>
+          <button onClick={deleteMaterial}>Delete Material</button>
         </div>
       </div>
     </div>
