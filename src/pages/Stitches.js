@@ -1,7 +1,7 @@
 const Stitches = () => {
   return (
     <div>
-      <h1></h1>
+      <h1>stitches</h1>
     </div>
   )
 }

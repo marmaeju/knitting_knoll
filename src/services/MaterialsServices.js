@@ -27,7 +27,7 @@ export const CreateMaterial = async (id, data) => {
   }
 }
 
-export const UpdateMaterial = async (id, date) => {
+export const UpdateMaterial = async (id, data) => {
   try {
     const res = await Client.put(`/materials/${id}`, data)
     return res.data
