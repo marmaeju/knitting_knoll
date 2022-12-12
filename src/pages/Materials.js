@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { CreateMaterial } from '../services/MaterialsServices'
 
 const Materials = () => {
+  const [materials, setMaterials] = useState([])
   const [formState, setFormState] = useState({ type: '', link: '' })
 
   return (
