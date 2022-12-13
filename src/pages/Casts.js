@@ -13,18 +13,42 @@ const Casts = () => {
     type: ''
   })
   const [deletedCast, setDeletedCast] = useState(false)
+  // const [filterState, setFilterState] = useState('')
 
   useEffect(() => {
     const handleCasts = async () => {
       const res = await axios.get('http://localhost:3001/casts/')
+      // if (filterState === '') {
+      //   setCasts(res.data)
+      // } else if (filterState === res.data.type) {
+      //   setCasts(res.data)
+      // }
       setCasts(res.data)
     }
     handleCasts()
   }, [deletedCast, formState])
 
+  // const searchMatch = (search) => {
+  //   const searchString = JSON.stringify(search)
+  //   if (searchString.indexOf(filterState) !== -1) {
+  //     return true
+  //   }
+  //   return false
+  // }
+
+  // const filterResults = () => {
+  //   const filteredData = casts.filter(searchMatch)
+  //   console.log(filteredData)
+  // }
+  // filterResults()
+
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
   }
+
+  // const handleFilter = (e) => {
+  //   setFilterState(e.target.value)
+  // }
 
   const handleSubmit = async (e) => {
     // e.preventDefault()
@@ -88,6 +112,14 @@ const Casts = () => {
           <button>Create Cast</button>
         </form>
       </div>
+      {/* <div>
+        <label htmlFor="filter">Filter:</label>
+        <select onChange={handleFilter}>
+          <option>Default</option>
+          <option value="Cast-On">Cast-On</option>
+          <option value="Cast-Off">Cast-Off</option>
+        </select>
+      </div> */}
       <div>
         {casts?.map((cast) => (
           <CastCard
