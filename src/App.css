@@ -10,14 +10,46 @@
 
 /* Nav */
 
+nav {
+  background-color: aliceblue;
+  opacity: 0.8;
+}
+
+.pages {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 /* Home */
 
 .home-main {
   background: aliceblue;
   opacity: 0.8;
+  margin: 100px;
+  height: 100vh;
 }
 
 .home-main p {
   font-weight: bold;
 }
+
+.home-btn {
+  width: 100px;
+  height: 30;
+}
+
+@media only screen and (max-width: 425px) {
+  .home-main {
+    margin: 10%;
+  }
+
+  .home-btn {
+    width: 20%;
+    height: 10%;
+    margin: 3%;
+  }
+
+}
+
+

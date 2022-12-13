@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: url('../src/images/dover.jpg') no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 

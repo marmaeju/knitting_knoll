@@ -14,10 +14,16 @@ const Home = () => {
         </div>
       </section>
       <section>
-        <div>
-          <button onClick={() => navigate('/materials')}>Materials</button>
-          <button onClick={() => navigate('/casts')}>Casts</button>
-          <button onClick={() => navigate('/stitches')}>Stitches</button>
+        <div className="btns-of-home">
+          <button className="home-btn" onClick={() => navigate('/materials')}>
+            Materials
+          </button>
+          <button className="home-btn" onClick={() => navigate('/casts')}>
+            Casts
+          </button>
+          <button className="home-btn" onClick={() => navigate('/stitches')}>
+            Stitches
+          </button>
         </div>
       </section>
     </main>
