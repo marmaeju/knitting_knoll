@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
 
-const MaterialCard = ({type, link, id, setDeletedMaterial, deletedMaterial}) => {
+const MaterialCard = ({name, type, link, id, setDeletedMaterial, deletedMaterial}) => {
   const [formState, setFormState] = useState({ type: '', link: '' })
   
   const handleChange = (e) => {
@@ -24,18 +24,25 @@ const MaterialCard = ({type, link, id, setDeletedMaterial, deletedMaterial}) => 
     <div>
       <div>
         <div>
+        <h3>{name}</h3>
         <p>{type}</p>
         <a href={link} target='_blank'>Tutorial</a>
         </div>
         <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="type">Type:</label>
+          <label htmlFor="name">Site Name:</label>
           <input
-            id="type"
-            placeholder="Yarn or Pattern"
-            value={formState.type}
+            id="name"
+            placeholder="name"
+            value={formState.name}
             onChange={handleChange}
           />
+          <label htmlFor="type">Type:</label>
+          <select id="type" onChange={handleChange}>
+            <option>Default</option>
+            <option value="Yarn">Yarn</option>
+            <option value="Pattern">Pattern</option>
+          </select>
           <label htmlFor="link">Link:</label>
           <input
             id="link"

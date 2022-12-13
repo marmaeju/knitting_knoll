@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const Materials = (props) => {
   const [materials, setMaterials] = useState([])
-  const [formState, setFormState] = useState({ type: '', link: '' })
+  const [formState, setFormState] = useState({ name: '', type: '', link: '' })
   const [deletedMaterial, setDeletedMaterial] = useState(false)
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Materials = (props) => {
       setMaterials(res.data)
     }
     handleMaterials()
-  }, [deletedMaterial])
+  }, [deletedMaterial, formState])
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
@@ -33,13 +33,19 @@ const Materials = (props) => {
       <div>
         <h4>Create New Resource</h4>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="type">Type:</label>
+          <label htmlFor="name">Site Name:</label>
           <input
-            id="type"
-            placeholder="Yarn or Pattern"
-            value={formState.type}
+            id="name"
+            placeholder="name"
+            value={formState.name}
             onChange={handleChange}
           />
+          <label htmlFor="type">Type:</label>
+          <select id="type" onChange={handleChange}>
+            <option>Default</option>
+            <option value="Yarn">Yarn</option>
+            <option value="Pattern">Pattern</option>
+          </select>
           <label htmlFor="link">Link:</label>
           <input
             id="link"
@@ -55,6 +61,7 @@ const Materials = (props) => {
           <MaterialCard
             key={material.id}
             id={material.id}
+            name={material.name}
             type={material.type}
             link={material.link}
             setDeletedMaterial={setDeletedMaterial}
