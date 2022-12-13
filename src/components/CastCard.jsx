@@ -35,7 +35,7 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
         <p>{type}</p>
         <img src={image}/>
         <p>{description}</p>
-        <a href={link} target='_blank'>{link}</a>
+        <a href={link} target='_blank'>Tutorial</a>
         </div>
         <div>
         <form onSubmit={handleSubmit}>
@@ -74,11 +74,11 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
             value={formState.type}
             onChange={handleChange}
           />
-          <button>Update Material</button>
+          <button>Update Cast</button>
         </form>
         </div>
         <div>
-          <button onClick={deleteCast}>Delete Material</button>
+          <button onClick={deleteCast}>Delete Cast</button>
         </div>
       </div>
     </div>

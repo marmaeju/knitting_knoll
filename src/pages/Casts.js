@@ -80,7 +80,7 @@ const Casts = () => {
             value={formState.type}
             onChange={handleChange}
           />
-          <button>Create Material</button>
+          <button>Create Cast</button>
         </form>
       </div>
       <div>

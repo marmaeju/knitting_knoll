@@ -39,7 +39,7 @@ const Stitches = () => {
 
   return (
     <div>
-      <h1>casts</h1>
+      <h1>stitches</h1>
       <div>
         <h4>Create New Resource</h4>
         <form onSubmit={handleSubmit}>
@@ -71,7 +71,7 @@ const Stitches = () => {
             value={formState.link}
             onChange={handleChange}
           />
-          <button>Create Material</button>
+          <button>Create Stitch</button>
         </form>
       </div>
       <div>
