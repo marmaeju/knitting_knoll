@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <header>
       <nav>
-        <h2>Knitting Knoll</h2>
+        <h2 className='title'>Knitting Knoll</h2>
         <section className='pages'>
           <div>
           <Link to='/'>Home</Link>

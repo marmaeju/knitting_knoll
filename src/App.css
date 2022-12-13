@@ -20,6 +20,11 @@ nav {
   justify-content: space-between;
 }
 
+.title {
+  margin:0;
+  padding-top: 20px;
+}
+
 
 /* Home */
 
@@ -37,6 +42,14 @@ nav {
 .home-btn {
   width: 100px;
   height: 30;
+  margin: 10px;
+}
+
+.btns-of-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 425px) {
