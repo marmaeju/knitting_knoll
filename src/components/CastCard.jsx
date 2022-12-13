@@ -60,18 +60,17 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
             value={formState.image}
             onChange={handleChange}
           />
+          <label htmlFor="type">Type:</label>
+          <select id="type" onChange={handleChange}>
+            <option>Default</option>
+            <option value="Cast-On">Cast-On</option>
+            <option value="Cast-Off">Cast-Off</option>
+          </select>
           <label htmlFor="link">Link:</label>
           <input
             id="link"
             placeholder="Link"
             value={formState.link}
-            onChange={handleChange}
-          />
-          <label htmlFor="type">Type:</label>
-          <input
-            id="type"
-            placeholder="Cast-On or Cast-Off"
-            value={formState.type}
             onChange={handleChange}
           />
           <button>Update Cast</button>

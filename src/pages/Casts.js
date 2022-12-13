@@ -20,7 +20,7 @@ const Casts = () => {
       setCasts(res.data)
     }
     handleCasts()
-  }, [deletedCast])
+  }, [deletedCast, formState])
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
@@ -66,18 +66,23 @@ const Casts = () => {
             value={formState.image}
             onChange={handleChange}
           />
+          <label htmlFor="type">Type:</label>
+          <select id="type" onChange={handleChange}>
+            <option>Default</option>
+            <option value="Cast-On">Cast-On</option>
+            <option value="Cast-Off">Cast-Off</option>
+          </select>
+          {/* <input
+            id="type"
+            placeholder="Cast-On or Cast-Off"
+            value={formState.type}
+            onChange={handleChange}
+          /> */}
           <label htmlFor="link">Link:</label>
           <input
             id="link"
             placeholder="Link"
             value={formState.link}
-            onChange={handleChange}
-          />
-          <label htmlFor="type">Type:</label>
-          <input
-            id="type"
-            placeholder="Cast-On or Cast-Off"
-            value={formState.type}
             onChange={handleChange}
           />
           <button>Create Cast</button>
