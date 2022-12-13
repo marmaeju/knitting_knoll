@@ -88,6 +88,11 @@ const Casts = () => {
           <CastCard
             key={cast.id}
             id={cast.id}
+            name={cast.name}
+            description={cast.description}
+            image={cast.image}
+            link={cast.link}
+            type={cast.type}
             setDeletedCast={setDeletedCast}
             deletedCast={deletedCast}
           />
