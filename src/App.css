@@ -3,8 +3,6 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  
-
 }
 
 
@@ -14,3 +12,12 @@
 
 
 /* Home */
+
+.home-main {
+  background: aliceblue;
+  opacity: 0.8;
+}
+
+.home-main p {
+  font-weight: bold;
+}

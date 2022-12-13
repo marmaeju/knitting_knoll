@@ -4,7 +4,7 @@ const Home = () => {
   let navigate = useNavigate()
 
   return (
-    <main>
+    <main className="home-main">
       <section>
         <div>
           <p>
