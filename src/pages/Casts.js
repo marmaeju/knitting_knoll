@@ -45,7 +45,7 @@ const Casts = () => {
       <div>
         <h4>Create New Resource</h4>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Stitch Name:</label>
+          <label htmlFor="name">Cast Name:</label>
           <input
             id="name"
             placeholder="Name"
