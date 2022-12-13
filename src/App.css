@@ -13,6 +13,7 @@
 nav {
   background-color: aliceblue;
   opacity: 0.8;
+  padding: 30px;
 }
 
 .pages {
@@ -21,9 +22,23 @@ nav {
 }
 
 .title {
-  margin:0;
-  padding-top: 20px;
+  font-size:xx-large;
+  font-weight: bold;
+  text-decoration: none;
+  color: black
 }
+
+.link {
+  margin:10px;
+  text-decoration: none;
+  color: black;
+}
+
+.page-links {
+  margin-top: 10px;
+}
+
+
 
 
 /* Home */

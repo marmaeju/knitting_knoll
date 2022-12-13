@@ -5,15 +5,14 @@ const Nav = () => {
   return (
     <header>
       <nav>
-        <h2 className='title'>Knitting Knoll</h2>
         <section className='pages'>
           <div>
-          <Link to='/'>Home</Link>
+          <Link to='/' className='title'>Knitting Knoll</Link>
           </div>
-          <div>
-          <Link to='/materials'>Materials</Link>
-          <Link to='/casts'>Casts</Link>
-          <Link to='/stitches'>Stitches</Link>
+          <div className='page-links'>
+          <Link to='/materials' className='link'>Materials</Link>
+          <Link to='/casts' className='link'>Casts</Link>
+          <Link to='/stitches' className='link'>Stitches</Link>
           </div>
         </section>
       </nav>
