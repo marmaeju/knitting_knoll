@@ -1,14 +1,14 @@
 /* App */
 .App {
   text-align: center;
-
-}
-
-.app-main{
   background-image: url('./images/dover.jpg');
   background-repeat: no-repeat;
   background-size: auto;
+
 }
+
+
+
 
 /* Nav */
 

@@ -15,7 +15,7 @@ function App() {
       <header className="App-header">
         <Nav />
       </header>
-      <main className="app-main">
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/casts" element={<Casts />} />
