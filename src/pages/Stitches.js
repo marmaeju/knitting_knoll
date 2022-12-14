@@ -11,6 +11,7 @@ const Stitches = () => {
     link: ''
   })
   const [deletedStitch, setDeletedStitch] = useState(false)
+  const [addedStitches, toggleAddedStitches] = useState(false)
 
   useEffect(() => {
     const handleStitches = async () => {
@@ -20,7 +21,7 @@ const Stitches = () => {
       setStitches(res.data)
     }
     handleStitches()
-  }, [deletedStitch])
+  }, [deletedStitch, formState])
 
   const handleChange = (e) => {
     setFormState({ ...formState, [e.target.id]: e.target.value })
@@ -32,7 +33,7 @@ const Stitches = () => {
       'https://knitting-knoll-backend.herokuapp.com/stitches/',
       formState
     )
-    setStitches(res)
+    toggleAddedStitches(!addedStitches)
     setFormState({
       name: '',
       description: '',

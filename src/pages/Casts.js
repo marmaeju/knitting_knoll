@@ -12,6 +12,7 @@ const Casts = () => {
     type: ''
   })
   const [deletedCast, setDeletedCast] = useState(false)
+  const [addedCasts, toggleAddedCasts] = useState(false)
 
   useEffect(() => {
     const handleCasts = async () => {
@@ -33,7 +34,7 @@ const Casts = () => {
       'https://knitting-knoll-backend.herokuapp.com/casts/',
       formState
     )
-    setCasts(res)
+    toggleAddedCasts(!addedCasts)
     setFormState({
       name: '',
       description: '',

@@ -60,16 +60,23 @@ nav {
   opacity: 0.8;
   margin: 100px;
   height: 100vh;
+  padding: 75px;
 }
 
 .home-btn {
   width: 100px;
   height: 30;
   margin: 10px;
-  background:rgb(173, 209, 241);
-  border: 2px solid;
+  background: aliceblue;
+  border: 2px solid rgb(58, 148, 227);
   border-radius: 5px;
   font-weight: bold;
+  color: rgb(58, 148, 227)
+}
+
+.home-btn:hover {
+  background: rgb(58, 148, 227);
+  color: aliceblue;
 }
 
 .btns-of-home {
@@ -78,6 +85,10 @@ nav {
   justify-content: center;
   align-items: center;
   
+}
+
+.resource{
+  margin: 15px;
 }
 
 /* Materials */

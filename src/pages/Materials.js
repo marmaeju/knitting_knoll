@@ -6,6 +6,7 @@ const Materials = (props) => {
   const [materials, setMaterials] = useState([])
   const [formState, setFormState] = useState({ name: '', type: '', link: '' })
   const [deletedMaterial, setDeletedMaterial] = useState(false)
+  const [addedMaterials, toggleAddedMaterials] = useState(false)
 
   useEffect(() => {
     const handleMaterials = async () => {
@@ -27,8 +28,8 @@ const Materials = (props) => {
       'https://knitting-knoll-backend.herokuapp.com/materials/',
       formState
     )
-    setMaterials(res)
-    setFormState({ type: '', link: '' })
+    toggleAddedMaterials(!addedMaterials)
+    setFormState({ name: '', type: '', link: '' })
   }
 
   return (
@@ -61,19 +62,17 @@ const Materials = (props) => {
         </form>
       </div>
       <div>
-        {materials
-          ? materials.map((material) => (
-              <MaterialCard
-                key={material.id}
-                id={material.id}
-                name={material.name}
-                type={material.type}
-                link={material.link}
-                setDeletedMaterial={setDeletedMaterial}
-                deletedMaterial={deletedMaterial}
-              />
-            ))
-          : ''}
+        {materials?.map((material) => (
+          <MaterialCard
+            key={material.id}
+            id={material.id}
+            name={material.name}
+            type={material.type}
+            link={material.link}
+            setDeletedMaterial={setDeletedMaterial}
+            deletedMaterial={deletedMaterial}
+          />
+        ))}
       </div>
     </div>
   )
