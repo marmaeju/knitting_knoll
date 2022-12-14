@@ -80,6 +80,30 @@ nav {
   
 }
 
+/* Materials */
+.materials-page {
+  background: aliceblue;
+  opacity: 0.8;
+  margin: 100px;
+  height: 100vh;
+}
+
+/* Stitches */
+.stitches-page {
+  background: aliceblue;
+  opacity: 0.8;
+  margin: 100px;
+  height: 100vh;
+}
+
+/* Casts */
+.casts-page {
+  background: aliceblue;
+  opacity: 0.8;
+  margin: 100px;
+  height: 100vh;
+}
+
 @media only screen and (max-width: 425px) {
   .home-main {
     margin: 10%;

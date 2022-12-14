@@ -14,7 +14,9 @@ const Stitches = () => {
 
   useEffect(() => {
     const handleStitches = async () => {
-      const res = await axios.get('http://localhost:3001/stitches/')
+      const res = await axios.get(
+        'https://knitting-knoll-backend.herokuapp.com/stitches/'
+      )
       setStitches(res.data)
     }
     handleStitches()
@@ -25,7 +27,11 @@ const Stitches = () => {
   }
 
   const handleSubmit = async (e) => {
-    const res = await axios.post('http://localhost:3001/stitches/', formState)
+    e.preventDefault()
+    const res = await axios.post(
+      'https://knitting-knoll-backend.herokuapp.com/stitches/',
+      formState
+    )
     setStitches(res)
     setFormState({
       name: '',
@@ -36,7 +42,7 @@ const Stitches = () => {
   }
 
   return (
-    <div>
+    <div className="stitches-page">
       <h1>stitches</h1>
       <div>
         <h4>Create New Resource</h4>

@@ -9,13 +9,13 @@ const MaterialCard = ({name, type, link, id, setDeletedMaterial, deletedMaterial
   }
 
   const handleSubmit = async (e) => {
-    const res = await axios.put(`/materials/${id}`, formState)
+    const res = await axios.put(`https://knitting-knoll-backend.herokuapp.com/materials/${id}`, formState)
     setFormState({ type: '', link: '' })
   }
 
   const deleteMaterial = async (e) => {
     e.preventDefault()
-    const res = await axios.delete(`/materials/${id}`)
+    const res = await axios.delete(`https://knitting-knoll-backend.herokuapp.com/materials/${id}`)
     setDeletedMaterial(!deletedMaterial)
   }
 

@@ -15,13 +15,13 @@ const StitchCard = ({id, name, description, image, link, deletedStitch, setDelet
   }
 
   const handleSubmit = async (e) => {
-    const res = await axios.put(`http://localhost:3001/stitches/${id}`, formState)
+    const res = await axios.put(`https://knitting-knoll-backend.herokuapp.com/stitches/${id}`, formState)
     setFormState({ type: '', link: '' })
   }
 
   const deleteStitch = async (e) => {
     e.preventDefault()
-    const res = await axios.delete(`http://localhost:3001/stitches/${id}`)
+    const res = await axios.delete(`https://knitting-knoll-backend.herokuapp.com/stitches/${id}`)
     setDeletedStitch(!deletedStitch)
   }
   

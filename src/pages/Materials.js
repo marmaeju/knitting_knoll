@@ -9,7 +9,9 @@ const Materials = (props) => {
 
   useEffect(() => {
     const handleMaterials = async () => {
-      const res = await axios.get('/materials/')
+      const res = await axios.get(
+        'https://knitting-knoll-backend.herokuapp.com/materials/'
+      )
       setMaterials(res.data)
     }
     handleMaterials()
@@ -20,13 +22,17 @@ const Materials = (props) => {
   }
 
   const handleSubmit = async (e) => {
-    const res = await axios.post('/materials/', formState)
+    e.preventDefault()
+    const res = await axios.post(
+      'https://knitting-knoll-backend.herokuapp.com/materials/',
+      formState
+    )
     setMaterials(res)
     setFormState({ type: '', link: '' })
   }
 
   return (
-    <div>
+    <div className="materials-page">
       <h1>materials</h1>
       <div>
         <h4>Create New Resource</h4>
@@ -55,17 +61,19 @@ const Materials = (props) => {
         </form>
       </div>
       <div>
-        {materials?.map((material) => (
-          <MaterialCard
-            key={material.id}
-            id={material.id}
-            name={material.name}
-            type={material.type}
-            link={material.link}
-            setDeletedMaterial={setDeletedMaterial}
-            deletedMaterial={deletedMaterial}
-          />
-        ))}
+        {materials
+          ? materials.map((material) => (
+              <MaterialCard
+                key={material.id}
+                id={material.id}
+                name={material.name}
+                type={material.type}
+                link={material.link}
+                setDeletedMaterial={setDeletedMaterial}
+                deletedMaterial={deletedMaterial}
+              />
+            ))
+          : ''}
       </div>
     </div>
   )

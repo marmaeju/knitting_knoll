@@ -15,7 +15,9 @@ const Casts = () => {
 
   useEffect(() => {
     const handleCasts = async () => {
-      const res = await axios.get('http://localhost:3001/casts/')
+      const res = await axios.get(
+        'https://knitting-knoll-backend.herokuapp.com/casts/'
+      )
       setCasts(res.data)
     }
     handleCasts()
@@ -26,7 +28,11 @@ const Casts = () => {
   }
 
   const handleSubmit = async (e) => {
-    const res = await axios.post('http://localhost:3001/casts/', formState)
+    e.preventDefault()
+    const res = await axios.post(
+      'https://knitting-knoll-backend.herokuapp.com/casts/',
+      formState
+    )
     setCasts(res)
     setFormState({
       name: '',
@@ -38,7 +44,7 @@ const Casts = () => {
   }
 
   return (
-    <div>
+    <div className="casts-page">
       <h1>casts</h1>
       <div>
         <h4>Create New Resource</h4>
