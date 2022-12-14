@@ -25,7 +25,7 @@ const MaterialCard = ({name, type, link, id, setDeletedMaterial, deletedMaterial
         <div>
         <h3>{name}</h3>
         <p>{type}</p>
-        <a href={link} target='_blank'>Tutorial</a>
+        <a href={link} target='_blank'>Link</a>
         </div>
         <div>
         <form onSubmit={handleSubmit}>
