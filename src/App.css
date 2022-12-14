@@ -21,11 +21,16 @@ nav {
   justify-content: space-between;
 }
 
+
 .title {
   font-size:xx-large;
   font-weight: bold;
   text-decoration: none;
   color: black
+}
+
+.title:hover {
+  text-shadow: 2px 2px rgb(173, 209, 241);
 }
 
 .link {
@@ -34,9 +39,16 @@ nav {
   color: black;
 }
 
+.link:hover {
+  font-weight: bold;
+  text-shadow: 2px 2px rgb(173, 209, 241);
+}
+
 .page-links {
   margin-top: 10px;
 }
+
+
 
 
 
@@ -76,6 +88,11 @@ nav {
     width: 20%;
     height: 10%;
     margin: 3%;
+  }
+
+  .page-links {
+    margin-top: 10%;
+    margin-left: 10%;
   }
 
 }
