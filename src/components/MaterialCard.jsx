@@ -9,13 +9,13 @@ const MaterialCard = ({name, type, link, id, setDeletedMaterial, deletedMaterial
   }
 
   const handleSubmit = async (e) => {
-    const res = await axios.put(`http://localhost:3001/materials/${id}`, formState)
+    const res = await axios.put(`/materials/${id}`, formState)
     setFormState({ type: '', link: '' })
   }
 
   const deleteMaterial = async (e) => {
     e.preventDefault()
-    const res = await axios.delete(`http://localhost:3001/materials/${id}`)
+    const res = await axios.delete(`/materials/${id}`)
     setDeletedMaterial(!deletedMaterial)
   }
 

@@ -9,7 +9,7 @@ const Materials = (props) => {
 
   useEffect(() => {
     const handleMaterials = async () => {
-      const res = await axios.get('http://localhost:3001/materials/')
+      const res = await axios.get('/materials/')
       setMaterials(res.data)
     }
     handleMaterials()
@@ -20,7 +20,7 @@ const Materials = (props) => {
   }
 
   const handleSubmit = async (e) => {
-    const res = await axios.post('http://localhost:3001/materials/', formState)
+    const res = await axios.post('/materials/', formState)
     setMaterials(res)
     setFormState({ type: '', link: '' })
   }
