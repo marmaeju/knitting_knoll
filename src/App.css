@@ -115,6 +115,10 @@ nav {
   height: 100vh;
 }
 
+.material-div {
+  background-color: rgba(240, 248, 255, 0.97);
+}
+
 @media only screen and (max-width: 425px) {
   .home-main {
     margin: 10%;

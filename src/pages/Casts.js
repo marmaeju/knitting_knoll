@@ -87,7 +87,7 @@ const Casts = () => {
           <button>Create Cast</button>
         </form>
       </div>
-      <div>
+      <div className="material-div">
         {casts?.map((cast) => (
           <CastCard
             key={cast.id}
