@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { CreateMaterial, GetMaterials } from '../services/MaterialsServices'
 import StitchCard from '../components/StitchCard'
 import axios from 'axios'
 
@@ -26,7 +25,6 @@ const Stitches = () => {
   }
 
   const handleSubmit = async (e) => {
-    // e.preventDefault()
     const res = await axios.post('http://localhost:3001/stitches/', formState)
     setStitches(res)
     setFormState({

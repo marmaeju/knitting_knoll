@@ -15,7 +15,6 @@ const StitchCard = ({id, name, description, image, link, deletedStitch, setDelet
   }
 
   const handleSubmit = async (e) => {
-    // e.preventDefault()
     const res = await axios.put(`http://localhost:3001/stitches/${id}`, formState)
     setFormState({ type: '', link: '' })
   }

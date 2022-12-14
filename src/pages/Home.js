@@ -7,23 +7,33 @@ const Home = () => {
     <main className="home-main">
       <section>
         <div>
-          <p>
+          <h3>
             Knitting Knoll is a knitting resource for knitters of all skill
             levels!
-          </p>
+          </h3>
         </div>
       </section>
       <section>
         <div className="btns-of-home">
-          <button className="home-btn" onClick={() => navigate('/materials')}>
-            Materials
-          </button>
-          <button className="home-btn" onClick={() => navigate('/casts')}>
-            Casts
-          </button>
-          <button className="home-btn" onClick={() => navigate('/stitches')}>
-            Stitches
-          </button>
+          <div>
+            <h5>
+              Materials is here to show you pattern and yarn web resources so
+              you can
+            </h5>
+            <button className="home-btn" onClick={() => navigate('/materials')}>
+              Materials
+            </button>
+          </div>
+          <div>
+            <button className="home-btn" onClick={() => navigate('/casts')}>
+              Casts
+            </button>
+          </div>
+          <div>
+            <button className="home-btn" onClick={() => navigate('/stitches')}>
+              Stitches
+            </button>
+          </div>
         </div>
       </section>
     </main>

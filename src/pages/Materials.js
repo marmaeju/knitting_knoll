@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { CreateMaterial, GetMaterials } from '../services/MaterialsServices'
 import MaterialCard from '../components/MaterialCard'
 import axios from 'axios'
 
@@ -21,7 +20,6 @@ const Materials = (props) => {
   }
 
   const handleSubmit = async (e) => {
-    // e.preventDefault()
     const res = await axios.post('http://localhost:3001/materials/', formState)
     setMaterials(res)
     setFormState({ type: '', link: '' })

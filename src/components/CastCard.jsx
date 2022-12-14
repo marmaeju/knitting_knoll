@@ -15,7 +15,6 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
   }
 
   const handleSubmit = async (e) => {
-    // e.preventDefault()
     const res = await axios.put(`http://localhost:3001/casts/${id}`, formState)
     setFormState({ type: '', link: '' })
   }

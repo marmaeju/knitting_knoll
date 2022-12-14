@@ -9,7 +9,6 @@ const MaterialCard = ({name, type, link, id, setDeletedMaterial, deletedMaterial
   }
 
   const handleSubmit = async (e) => {
-    // e.preventDefault()
     const res = await axios.put(`http://localhost:3001/materials/${id}`, formState)
     setFormState({ type: '', link: '' })
   }
