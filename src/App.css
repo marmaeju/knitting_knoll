@@ -50,7 +50,7 @@ img {
 
 nav {
   background-color: aliceblue;
-  opacity: 0.8;
+  opacity: 0.9;
   padding: 30px;
 }
 
@@ -90,7 +90,7 @@ nav {
 
 .home-section {
   background: aliceblue;
-  opacity: 0.8;
+  opacity: 0.9;
   margin: 100px;
   height: 100%;
   padding: 100px;
@@ -116,7 +116,7 @@ nav {
 /* Materials */
 .materials-page {
   background: aliceblue;
-  opacity: 0.8;
+  opacity: 0.9;
   margin: 100px;
   height: 100%;
   padding:100px;
@@ -146,7 +146,7 @@ nav {
 
 .casts-page {
   background: aliceblue;
-  opacity: 0.8;
+  opacity: 0.9;
   margin: 100px;
   height: 100%;
   padding:100px;
@@ -231,6 +231,25 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  /* Casts */
+
+  .casts-page {
+    margin: 10%;
+    height: 100%;
+    padding: 10%;
+  }
+
+  .cast-div {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cast-description {
+    padding: 15%;
   }
 
 }

@@ -33,7 +33,7 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
         <h3>{name}</h3>
         <p>{type}</p>
         <img src={image}/>
-        <p>{description}</p>
+        <p className='cast-description'>{description}</p>
         <a href={link} target='_blank' className='cast-link'>Tutorial</a>
         </div>
         <div className='cast-card-form'>
