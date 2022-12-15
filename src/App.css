@@ -39,6 +39,12 @@ select {
   margin: 10px;
 }
 
+img {
+  height: 50%;
+  width: 50%;
+  border-radius: 5%;
+}
+
 
 /* Nav */
 
@@ -136,25 +142,46 @@ nav {
   margin: 50px;
 }
 
+/* Casts */
+
+.casts-page {
+  background: aliceblue;
+  opacity: 0.8;
+  margin: 100px;
+  height: 100%;
+  padding:100px;
+}
+
+.cast-div {
+  border: 2px solid #61aba1;
+  padding: 50px
+}
+
+.cast-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+
+.cast-link:hover {
+  color: #61aba1;
+}
+
+.cast-card {
+  margin: 25px;
+}
+
+.cast-card-form {
+  margin: 15px
+}
+
 /* Stitches */
 .stitches-page {
   background: aliceblue;
   opacity: 0.8;
   margin: 100px;
   height: 100vh;
-}
-
-/* Casts */
-.casts-page {
-  background: aliceblue;
-  opacity: 0.8;
-  margin: 100px;
-  height: 100vh;
-  
-}
-
-.cast-div {
-  background-color: rgba(240, 248, 255, 0.97);
 }
 
 @media only screen and (max-width: 425px) {
@@ -186,7 +213,7 @@ nav {
   }
 
   .home-btn {
-    width: 70%;
+    width: 100%;
     height: 10%;
     margin: 3%;
   }

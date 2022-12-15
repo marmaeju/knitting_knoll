@@ -27,16 +27,16 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
 
   
   return (
-    <div>
+    <div className='cast-card'> 
       <div>
         <div>
         <h3>{name}</h3>
         <p>{type}</p>
         <img src={image}/>
         <p>{description}</p>
-        <a href={link} target='_blank'>Tutorial</a>
+        <a href={link} target='_blank' className='cast-link'>Tutorial</a>
         </div>
-        <div>
+        <div className='cast-card-form'>
         <form onSubmit={handleSubmit}>
         <label htmlFor="name">Cast Name:</label>
           <input
@@ -44,6 +44,7 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
             placeholder="Name"
             value={formState.name}
             onChange={handleChange}
+            className="mobile-input"
           />
           <label htmlFor="description">Description</label>
           <input
@@ -51,6 +52,7 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
             placeholder="description"
             value={formState.description}
             onChange={handleChange}
+            className="mobile-input"
           />
           <label htmlFor="image">Image</label>
           <input
@@ -58,9 +60,10 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
             placeholder="image"
             value={formState.image}
             onChange={handleChange}
+            className="mobile-input"
           />
           <label htmlFor="type">Type:</label>
-          <select id="type" onChange={handleChange}>
+          <select id="type" onChange={handleChange} className='mobile-select'>
             <option>Default</option>
             <option value="Cast-On">Cast-On</option>
             <option value="Cast-Off">Cast-Off</option>
@@ -71,6 +74,7 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
             placeholder="Link"
             value={formState.link}
             onChange={handleChange}
+            className="mobile-input"
           />
           <button>Update Cast</button>
         </form>

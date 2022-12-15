@@ -38,11 +38,10 @@ const Materials = (props) => {
         <h1>Material Resources</h1>
         <div>
           <h4>Create new material resource in the form below!</h4>
-          <form onSubmit={handleSubmit} className="create-material-form">
+          <form onSubmit={handleSubmit}>
             <label htmlFor="name">Site Name:</label>
             <input
               id="name"
-              // placeholder="name"
               value={formState.name}
               onChange={handleChange}
               className="mobile-input"
@@ -56,7 +55,6 @@ const Materials = (props) => {
             <label htmlFor="link">Link:</label>
             <input
               id="link"
-              // placeholder="Link"
               value={formState.link}
               onChange={handleChange}
               className="mobile-input"
