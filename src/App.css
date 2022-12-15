@@ -173,8 +173,10 @@ nav {
   .pages {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .page-links {
+    margin-top: 10%;
   }
 
   /* Home */
@@ -187,11 +189,6 @@ nav {
     width: 70%;
     height: 10%;
     margin: 3%;
-  }
-
-  .page-links {
-    margin-top: 10%;
-    margin-left: 10%;
   }
 
   /* Materials */
