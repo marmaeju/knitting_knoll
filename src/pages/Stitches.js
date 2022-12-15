@@ -44,54 +44,56 @@ const Stitches = () => {
 
   return (
     <div className="stitches-page">
-      <h1>stitches</h1>
-      <div>
-        <h4>Create New Resource</h4>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Stitch Name:</label>
-          <input
-            id="name"
-            placeholder="Name"
-            value={formState.name}
-            onChange={handleChange}
-          />
-          <label htmlFor="description">Description</label>
-          <input
-            id="description"
-            placeholder="description"
-            value={formState.description}
-            onChange={handleChange}
-          />
-          <label htmlFor="image">Image</label>
-          <input
-            id="image"
-            placeholder="image"
-            value={formState.image}
-            onChange={handleChange}
-          />
-          <label htmlFor="link">Link:</label>
-          <input
-            id="link"
-            placeholder="Link"
-            value={formState.link}
-            onChange={handleChange}
-          />
-          <button>Create Stitch</button>
-        </form>
-      </div>
-      <div>
-        {stitches?.map((stitch) => (
-          <StitchCard
-            key={stitch.id}
-            id={stitch.id}
-            name={stitch.name}
-            description={stitch.description}
-            image={stitch.image}
-            link={stitch.link}
-            setDeletedStitch={setDeletedStitch}
-            deletedStitch={deletedStitch}
-          />
-        ))}
+      <div className="stitch-div">
+        <h1>Stitches</h1>
+        <div>
+          <h4>Create new stitch in the form below!</h4>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name">Stitch Name:</label>
+            <input
+              id="name"
+              value={formState.name}
+              onChange={handleChange}
+              className="mobile-input"
+            />
+            <label htmlFor="description">Description</label>
+            <input
+              id="description"
+              value={formState.description}
+              onChange={handleChange}
+              className="mobile-input"
+            />
+            <label htmlFor="image">Image</label>
+            <input
+              id="image"
+              value={formState.image}
+              onChange={handleChange}
+              className="mobile-input"
+            />
+            <label htmlFor="link">Link:</label>
+            <input
+              id="link"
+              value={formState.link}
+              onChange={handleChange}
+              className="mobile-input"
+            />
+            <button>Create Stitch</button>
+          </form>
+        </div>
+        <div>
+          {stitches?.map((stitch) => (
+            <StitchCard
+              key={stitch.id}
+              id={stitch.id}
+              name={stitch.name}
+              description={stitch.description}
+              image={stitch.image}
+              link={stitch.link}
+              setDeletedStitch={setDeletedStitch}
+              deletedStitch={deletedStitch}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

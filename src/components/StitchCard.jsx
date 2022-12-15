@@ -26,43 +26,43 @@ const StitchCard = ({id, name, description, image, link, deletedStitch, setDelet
   }
   
   return (
-    <div>
+    <div className='stitch-card'>
       <div>
         <div>
         <h3>{name}</h3>
         <img src={image}/>
-        <p>{description}</p>
-        <a href={link} target='_blank'>Tutorial</a>
+        <p className='stitch-description'>{description}</p>
+        <a href={link} target='_blank' className='stitch-link'>Tutorial</a>
         </div>
-        <div>
+        <div className='stitch-card-form'>
         <form onSubmit={handleSubmit}>
         <label htmlFor="name">Stitch Name:</label>
           <input
             id="name"
-            placeholder="Name"
             value={formState.name}
             onChange={handleChange}
+            className="mobile-input"
           />
           <label htmlFor="description">Description</label>
           <input
             id="description"
-            placeholder="description"
             value={formState.description}
             onChange={handleChange}
+            className="mobile-input"
           />
           <label htmlFor="image">Image</label>
           <input
             id="image"
-            placeholder="image"
             value={formState.image}
             onChange={handleChange}
+            className="mobile-input"
           />
-          <label htmlFor="link">Link:</label>
+          <label htmlFor="link">Tutorial Link:</label>
           <input
             id="link"
-            placeholder="Link"
             value={formState.link}
             onChange={handleChange}
+            className="mobile-input"
           />
           <button>Update Stitch</button>
         </form>

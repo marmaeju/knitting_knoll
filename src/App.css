@@ -50,7 +50,7 @@ img {
 
 nav {
   background-color: aliceblue;
-  opacity: 0.9;
+  opacity: 0.95;
   padding: 30px;
 }
 
@@ -90,7 +90,7 @@ nav {
 
 .home-section {
   background: aliceblue;
-  opacity: 0.9;
+  opacity: 0.95;
   margin: 100px;
   height: 100%;
   padding: 100px;
@@ -116,7 +116,7 @@ nav {
 /* Materials */
 .materials-page {
   background: aliceblue;
-  opacity: 0.9;
+  opacity: 0.95;
   margin: 100px;
   height: 100%;
   padding:100px;
@@ -146,7 +146,7 @@ nav {
 
 .casts-page {
   background: aliceblue;
-  opacity: 0.9;
+  opacity: 0.95;
   margin: 100px;
   height: 100%;
   padding:100px;
@@ -179,9 +179,34 @@ nav {
 /* Stitches */
 .stitches-page {
   background: aliceblue;
-  opacity: 0.8;
+  opacity: 0.95;
   margin: 100px;
-  height: 100vh;
+  height: 100%;
+  padding:100px;
+}
+
+.stitch-div {
+  border: 2px solid #61aba1;
+  padding: 50px
+}
+
+.stitch-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+
+.stitch-link:hover {
+  color: #61aba1;
+}
+
+.stitch-card {
+  margin: 25px;
+}
+
+.stitch-card-form {
+  margin: 15px
 }
 
 @media only screen and (max-width: 425px) {
@@ -193,6 +218,11 @@ nav {
   
   .mobile-select {
     width: 100px;
+  }
+
+  img {
+    height: 70%;
+    width: 70%;
   }
 
   /* Nav */
@@ -249,7 +279,26 @@ nav {
   }
 
   .cast-description {
-    padding: 15%;
+    padding: 10%;
+  }
+
+  /* Stitches */
+
+  .stitches-page {
+    margin: 10%;
+    height: 100%;
+    padding: 10%;
+  }
+
+  .stitch-div {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stitch-description {
+    padding: 10%;
   }
 
 }
