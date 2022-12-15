@@ -45,9 +45,10 @@ const Materials = (props) => {
               // placeholder="name"
               value={formState.name}
               onChange={handleChange}
+              className="mobile-input"
             />
             <label htmlFor="type">Type:</label>
-            <select id="type" onChange={handleChange}>
+            <select id="type" onChange={handleChange} className="mobile-select">
               <option></option>
               <option value="Yarn">Yarn</option>
               <option value="Pattern">Pattern</option>
@@ -58,6 +59,7 @@ const Materials = (props) => {
               // placeholder="Link"
               value={formState.link}
               onChange={handleChange}
+              className="mobile-input"
             />
             <button>Create Material</button>
           </form>
