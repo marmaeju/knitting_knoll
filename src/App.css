@@ -31,10 +31,12 @@ button:hover {
 
 input {
   width: 450px;
+  margin:10px;
 }
 
 select {
   width: 100px;
+  margin: 10px;
 }
 
 
@@ -164,6 +166,15 @@ nav {
   
   .mobile-select {
     width: 100px;
+  }
+
+  /* Nav */
+
+  .pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   /* Home */
