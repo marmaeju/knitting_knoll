@@ -41,7 +41,6 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
         <label htmlFor="name">Cast Name:</label>
           <input
             id="name"
-            placeholder="Name"
             value={formState.name}
             onChange={handleChange}
             className="mobile-input"
@@ -49,7 +48,6 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
           <label htmlFor="description">Description</label>
           <input
             id="description"
-            placeholder="description"
             value={formState.description}
             onChange={handleChange}
             className="mobile-input"
@@ -57,7 +55,6 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
           <label htmlFor="image">Image</label>
           <input
             id="image"
-            placeholder="image"
             value={formState.image}
             onChange={handleChange}
             className="mobile-input"
@@ -71,7 +68,6 @@ const CastCard = ({id, name, description, image, link, type, deletedCast, setDel
           <label htmlFor="link">Link:</label>
           <input
             id="link"
-            placeholder="Link"
             value={formState.link}
             onChange={handleChange}
             className="mobile-input"
