@@ -5,7 +5,37 @@
   padding: 0;
 }
 
+/* General */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+button {
+  width: 100px;
+  height: 30;
+  margin: 10px;
+  background: aliceblue;
+  border: 2px solid #61aba1;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #61aba1
+}
+
+button:hover {
+  background: #61aba1;
+  color: aliceblue;
+}
+
+input {
+  width: 450px;
+}
+
+select {
+  width: 100px;
+}
 
 
 /* Nav */
@@ -30,7 +60,7 @@ nav {
 }
 
 .title:hover {
-  text-shadow: 2px 2px rgb(173, 209, 241);
+  text-shadow: 2px 2px #61aba1;
 }
 
 .link {
@@ -41,17 +71,12 @@ nav {
 
 .link:hover {
   font-weight: bold;
-  text-shadow: 2px 2px rgb(173, 209, 241);
+  text-shadow: 2px 2px #61aba1;
 }
 
 .page-links {
   margin-top: 10px;
 }
-
-
-
-
-
 
 /* Home */
 
@@ -61,22 +86,6 @@ nav {
   margin: 100px;
   height: 100vh;
   padding: 100px;
-}
-
-.home-btn {
-  width: 100px;
-  height: 30;
-  margin: 10px;
-  background: aliceblue;
-  border: 2px solid #61aba1;
-  border-radius: 5px;
-  font-weight: bold;
-  color: #61aba1
-}
-
-.home-btn:hover {
-  background: #61aba1;
-  color: aliceblue;
 }
 
 .btns-of-home {
@@ -96,7 +105,28 @@ nav {
   background: aliceblue;
   opacity: 0.8;
   margin: 100px;
-  height: 100vh;
+  height: 100%;
+  padding:100px;
+}
+
+.material-div {
+  border: 2px solid #61aba1;
+  padding: 50px
+}
+
+.material-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+
+.material-link:hover {
+  color: #61aba1;
+}
+
+.material-card {
+  margin: 50px;
 }
 
 /* Stitches */

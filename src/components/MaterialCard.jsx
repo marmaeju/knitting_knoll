@@ -20,32 +20,29 @@ const MaterialCard = ({name, type, link, id, setDeletedMaterial, deletedMaterial
   }
 
   return (
-    <div>
+    <div className='material-card'>
       <div>
         <div>
-        <h3>{name}</h3>
+        <a href={link} target='_blank' className='material-link'>{name}</a>
         <p>{type}</p>
-        <a href={link} target='_blank'>Link</a>
         </div>
         <div>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Site Name:</label>
           <input
             id="name"
-            placeholder="name"
             value={formState.name}
             onChange={handleChange}
           />
           <label htmlFor="type">Type:</label>
           <select id="type" onChange={handleChange}>
-            <option>Default</option>
+            <option></option>
             <option value="Yarn">Yarn</option>
             <option value="Pattern">Pattern</option>
           </select>
           <label htmlFor="link">Link:</label>
           <input
             id="link"
-            placeholder="Link"
             value={formState.link}
             onChange={handleChange}
           />

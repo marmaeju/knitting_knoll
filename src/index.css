@@ -1,10 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  /* background: rgb(58, 148, 227); */
-  
   background: url('../src/images/26B50F63-42BC-4EB3-8C91-639D4D94650D_1_201_a.jpeg') repeat center;
-  background-size: cover;
+  background-size: auto;
 }
 
 

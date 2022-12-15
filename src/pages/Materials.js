@@ -34,45 +34,47 @@ const Materials = (props) => {
 
   return (
     <div className="materials-page">
-      <h1>materials</h1>
-      <div>
-        <h4>Create New Resource</h4>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Site Name:</label>
-          <input
-            id="name"
-            placeholder="name"
-            value={formState.name}
-            onChange={handleChange}
-          />
-          <label htmlFor="type">Type:</label>
-          <select id="type" onChange={handleChange}>
-            <option>Default</option>
-            <option value="Yarn">Yarn</option>
-            <option value="Pattern">Pattern</option>
-          </select>
-          <label htmlFor="link">Link:</label>
-          <input
-            id="link"
-            placeholder="Link"
-            value={formState.link}
-            onChange={handleChange}
-          />
-          <button>Create Material</button>
-        </form>
-      </div>
-      <div>
-        {materials?.map((material) => (
-          <MaterialCard
-            key={material.id}
-            id={material.id}
-            name={material.name}
-            type={material.type}
-            link={material.link}
-            setDeletedMaterial={setDeletedMaterial}
-            deletedMaterial={deletedMaterial}
-          />
-        ))}
+      <div className="material-div">
+        <h1>Material Resources</h1>
+        <div>
+          <h4>Create new material resource in the form below!</h4>
+          <form onSubmit={handleSubmit} className="create-material-form">
+            <label htmlFor="name">Site Name:</label>
+            <input
+              id="name"
+              // placeholder="name"
+              value={formState.name}
+              onChange={handleChange}
+            />
+            <label htmlFor="type">Type:</label>
+            <select id="type" onChange={handleChange}>
+              <option></option>
+              <option value="Yarn">Yarn</option>
+              <option value="Pattern">Pattern</option>
+            </select>
+            <label htmlFor="link">Link:</label>
+            <input
+              id="link"
+              // placeholder="Link"
+              value={formState.link}
+              onChange={handleChange}
+            />
+            <button>Create Material</button>
+          </form>
+        </div>
+        <div>
+          {materials?.map((material) => (
+            <MaterialCard
+              key={material.id}
+              id={material.id}
+              name={material.name}
+              type={material.type}
+              link={material.link}
+              setDeletedMaterial={setDeletedMaterial}
+              deletedMaterial={deletedMaterial}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
