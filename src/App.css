@@ -60,7 +60,7 @@ nav {
   opacity: 0.8;
   margin: 100px;
   height: 100vh;
-  padding: 75px;
+  padding: 100px;
 }
 
 .home-btn {
@@ -68,14 +68,14 @@ nav {
   height: 30;
   margin: 10px;
   background: aliceblue;
-  border: 2px solid rgb(58, 148, 227);
+  border: 2px solid #61aba1;
   border-radius: 5px;
   font-weight: bold;
-  color: rgb(58, 148, 227)
+  color: #61aba1
 }
 
 .home-btn:hover {
-  background: rgb(58, 148, 227);
+  background: #61aba1;
   color: aliceblue;
 }
 
@@ -113,14 +113,15 @@ nav {
   opacity: 0.8;
   margin: 100px;
   height: 100vh;
+  
 }
 
-.material-div {
+.cast-div {
   background-color: rgba(240, 248, 255, 0.97);
 }
 
 @media only screen and (max-width: 425px) {
-  .home-main {
+  .home-section {
     margin: 10%;
   }
 

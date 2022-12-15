@@ -47,7 +47,7 @@ const Casts = () => {
   return (
     <div className="casts-page">
       <h1>casts</h1>
-      <div>
+      <div className="cast-div">
         <h4>Create New Resource</h4>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Cast Name:</label>
@@ -86,8 +86,8 @@ const Casts = () => {
           />
           <button>Create Cast</button>
         </form>
-      </div>
-      <div className="material-div">
+        {/* </div>
+      <div className="cast-div"> */}
         {casts?.map((cast) => (
           <CastCard
             key={cast.id}
